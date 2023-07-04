@@ -1,12 +1,17 @@
 import TodoFieldComponent from "../../components/todo-field";
 import TodosComponent from "../../components/todos";
+import TodoComponent from "../../components/todos/todo";
 
 const TodoContainer = () => {
   return (
-    <div className="max-w-md mx-auto">
+    <div className="md:max-w-3xl md:mx-auto">
       <div className="m-4 p-4 border border-gray-300">
         <TodoFieldComponent />
-        <TodosComponent />
+        <TodosComponent>
+          <TodoComponent />
+          <TodoComponent />
+          <TodoComponent />
+        </TodosComponent>
       </div>
     </div>
   );
