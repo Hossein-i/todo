@@ -1,5 +1,13 @@
-const TodosComponents = () => {
-    return ( <div>hiiii</div> );
-}
- 
-export default TodosComponents;
+import TodoComponent from "./todo";
+
+const TodosComponent = () => {
+  return (
+    <div className="border border-gray-300">
+      <TodoComponent />
+      <TodoComponent />
+      <TodoComponent />
+    </div>
+  );
+};
+
+export default TodosComponent;
