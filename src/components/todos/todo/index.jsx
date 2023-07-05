@@ -2,22 +2,21 @@ import { PencilIcon, TrashIcon, CheckIcon } from "@heroicons/react/24/outline";
 import CheckboxComponent from "../../checkbox";
 import { useState } from "react";
 
-const TodoComponent = () => {
-  const [checked, setChecked] = useState(false);
+const TodoComponent = ({ id, title, done }) => {
   const [isDisabled, setIsDisabled] = useState(true);
 
   return (
-    <div className="flex mb-2 group">
+    <div className="flex group">
       <CheckboxComponent
-        checked={checked}
-        onClick={() => setChecked(!checked)}
+        checked={done}
+        // onClick={() => setChecked(!checked)}
       />
       <input
         type="text"
         className={`w-full p-3 border border-gray-300 ${
-          checked && "line-through opacity-50"
+          done && "line-through opacity-50"
         }`}
-        defaultValue={"hi"}
+        value={title}
         disabled={isDisabled}
       />
 

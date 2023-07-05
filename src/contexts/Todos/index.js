@@ -3,7 +3,7 @@ import useLocalStorage from "../../hooks/localStorage";
 
 const TodosContext = React.createContext({
   todos: [{ id: "", title: "", done: false }],
-  createTodo: (newTodo) => {},
+  createTodo: (title) => {},
   updateTodo: (id, newTodo) => {},
   deleteTodo: (id) => {},
 });
@@ -12,9 +12,9 @@ const TodosContextProvider = ({ children }) => {
   const [todosLS, setTodosLS] = useLocalStorage("todos");
   const [todos, setTodos] = useState(todosLS || []);
 
-  const createTodo = (newTodo) => {
+  const createTodo = (title) => {
     const id = "id-" + new Date().getTime();
-    const newTodos = [...todos, { ...newTodo, id }];
+    const newTodos = [...todos, { id, title, done: false }];
     setTodos(newTodos);
   };
   const updateTodo = (id, newTodo) => {
