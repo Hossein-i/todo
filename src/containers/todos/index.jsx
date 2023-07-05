@@ -4,7 +4,7 @@ import TodoFieldComponent from "../../components/todo-field";
 import TodosComponent from "../../components/todos";
 import TodoComponent from "../../components/todos/todo";
 
-const TodoContainer = () => {
+const TodosContainer = () => {
   const [open, setOpen] = useState(true);
   const { todos, createTodo, updateTodo, deleteTodo } =
     useContext(TodosContext);
@@ -44,4 +44,4 @@ const TodoContainer = () => {
   );
 };
 
-export default TodoContainer;
+export default TodosContainer;

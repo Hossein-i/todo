@@ -1,4 +1,4 @@
-import TodoContainer from "./containers/todo";
+import TodosContainer from "./containers/todos";
 import { TodosContextProvider } from "./contexts/todos";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         <h1 className="text-5xl font-extralight text-center">Todo App</h1>
       </div>
       <TodosContextProvider>
-        <TodoContainer />
+        <TodosContainer />
       </TodosContextProvider>
     </div>
   );
