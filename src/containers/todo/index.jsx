@@ -1,15 +1,22 @@
 import { useContext, useState } from "react";
-import { TodosContext } from "../../contexts/Todos";
+import { TodosContext } from "../../contexts/todos";
 import TodoFieldComponent from "../../components/todo-field";
 import TodosComponent from "../../components/todos";
 import TodoComponent from "../../components/todos/todo";
 
 const TodoContainer = () => {
   const [open, setOpen] = useState(true);
-  const { todos, createTodo } = useContext(TodosContext);
+  const { todos, createTodo, updateTodo, deleteTodo } =
+    useContext(TodosContext);
 
   const handleCreate = (title) => {
     createTodo(title);
+  };
+  const handleUpdate = (id, newTodo) => {
+    updateTodo(id, newTodo);
+  };
+  const handleDelete = (id) => {
+    deleteTodo(id);
   };
 
   return (
@@ -23,7 +30,12 @@ const TodoContainer = () => {
         {open && (
           <TodosComponent>
             {todos.map((todo) => (
-              <TodoComponent key={todo.id} {...todo} />
+              <TodoComponent
+                key={todo.id}
+                {...todo}
+                onUpdate={handleUpdate}
+                onDelete={handleDelete}
+              />
             ))}
           </TodosComponent>
         )}

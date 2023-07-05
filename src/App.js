@@ -1,5 +1,5 @@
 import TodoContainer from "./containers/todo";
-import { TodosContextProvider } from "./contexts/Todos";
+import { TodosContextProvider } from "./contexts/todos";
 
 function App() {
   return (

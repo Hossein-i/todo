@@ -15,7 +15,7 @@ const TodoFieldComponent = ({ open, onToggle, onCreate }) => {
   };
 
   return (
-    <div className="flex mb-4">
+    <div className="flex">
       <button className="border border-gray-300 p-4" onClick={onToggle}>
         {open ? (
           <ChevronUpIcon className="w-5 h-5" />

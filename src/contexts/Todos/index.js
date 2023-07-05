@@ -14,16 +14,19 @@ const TodosContextProvider = ({ children }) => {
 
   const createTodo = (title) => {
     const id = "id-" + new Date().getTime();
-    const newTodos = [...todos, { id, title, done: false }];
-    setTodos(newTodos);
+
+    setTodos((currentTodos) => [...currentTodos, { id, title, done: false }]);
   };
   const updateTodo = (id, newTodo) => {
-    const newTodos = [...todos, { ...newTodo, id }];
-    setTodos(newTodos);
+    setTodos((currentTodos) =>
+      currentTodos.map((todo) => {
+        if (todo.id === id) return { ...todo, ...newTodo };
+        return todo;
+      })
+    );
   };
   const deleteTodo = (id) => {
-    const filteredTodos = todos.filteredTodos((todo) => todo.id !== id);
-    setTodos(filteredTodos);
+    setTodos((currentTodos) => currentTodos.filter((todo) => todo.id !== id));
   };
 
   useEffect(() => {
