@@ -10,6 +10,18 @@ function App() {
       <TodosContextProvider>
         <TodosContainer />
       </TodosContextProvider>
+      <div className="text-center text-xs">
+        <p>
+          Created with ❤️ by{" "}
+          <a
+            className="text-blue-600"
+            href="https://github.com/Hossein-i"
+            target="_blank" rel="noreferrer"
+          >
+            Hossein-i
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
