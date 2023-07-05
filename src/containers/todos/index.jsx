@@ -31,7 +31,7 @@ const TodosContainer = () => {
 
   return (
     <div className="md:max-w-3xl md:mx-auto">
-      <div className="m-4 p-4 border border-gray-300">
+      <div className="m-4 p-4 border border-gray-600">
         <TodoFieldComponent
           open={open}
           onToggle={() => setOpen(!open)}
@@ -56,7 +56,7 @@ const TodosContainer = () => {
                 ))}
             </TodosComponent>
             <div className="flex justify-between">
-              <div className="border border-gray-300 p-2">
+              <div className="border border-gray-600 p-2">
                 <p>
                   {todos.length > 0 ? (
                     <>
@@ -74,7 +74,7 @@ const TodosContainer = () => {
               />
               <div>
                 <button
-                  className="p-2 border border-gray-300"
+                  className="p-2 border border-gray-600"
                   onClick={handleDeleteCompleted}
                 >
                   Clear completed

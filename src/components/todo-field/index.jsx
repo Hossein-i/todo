@@ -16,7 +16,7 @@ const TodoFieldComponent = ({ open, onToggle, onCreate }) => {
 
   return (
     <div className="flex">
-      <button className="border border-gray-300 p-4" onClick={onToggle}>
+      <button className="border border-gray-600 p-4" onClick={onToggle}>
         {open ? (
           <ChevronUpIcon className="w-5 h-5" />
         ) : (
@@ -26,7 +26,7 @@ const TodoFieldComponent = ({ open, onToggle, onCreate }) => {
       <form className="flex-1 flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="w-full border border-gray-300 px-4"
+          className="w-full border border-gray-600 px-4"
           placeholder="What need to be done?"
           value={title}
           onInput={(event) => setTitle(event.target.value)}

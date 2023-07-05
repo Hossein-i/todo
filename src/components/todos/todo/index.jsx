@@ -27,7 +27,7 @@ const TodoComponent = ({ id, title, done, onUpdate, onDelete }) => {
       <form className="flex-1 flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className={`w-full p-3 border border-gray-300 ${
+          className={`w-full p-3 border border-gray-600 ${
             done && "line-through text-gray-400"
           }`}
           value={currentTitle}
