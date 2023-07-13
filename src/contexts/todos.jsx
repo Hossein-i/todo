@@ -42,4 +42,5 @@ const TodosContextProvider = ({ children }) => {
   );
 };
 
-export { TodosContext, TodosContextProvider };
+export default TodosContextProvider;
+export { TodosContext };

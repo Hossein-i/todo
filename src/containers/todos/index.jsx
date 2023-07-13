@@ -43,7 +43,7 @@ const TodosContainer = () => {
               {todos
                 .filter((todo) => {
                   if (filter === "Active") return !todo.done;
-                  else if (filter === "Completed") return todo.done;
+                  else if (filter === "Done") return todo.done;
                   else return todo;
                 })
                 .map((todo) => (
