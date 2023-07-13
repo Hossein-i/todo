@@ -15,7 +15,7 @@ function App() {
           Created with ❤️ by{" "}
           <a
             className="text-blue-600"
-            href="https://github.com/Hossein-i"
+            href="https://hossein-i.ir"
             target="_blank" rel="noreferrer"
           >
             Hossein-i

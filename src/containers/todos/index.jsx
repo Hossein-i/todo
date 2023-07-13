@@ -56,7 +56,7 @@ const TodosContainer = () => {
                 ))}
             </TodosComponent>
             <div className="flex justify-between">
-              <div className="border border-gray-600 p-2">
+              <div className="border border-gray-600 p-2 flex items-center">
                 <p>
                   {todos.length > 0 ? (
                     <>
@@ -69,7 +69,7 @@ const TodosContainer = () => {
               </div>
               <TabsComponent
                 active={filter}
-                tabs={["All", "Active", "Completed"]}
+                tabs={["All", "Active", "Done"]}
                 onChange={handleFilter}
               />
               <div>
@@ -77,7 +77,7 @@ const TodosContainer = () => {
                   className="p-2 border border-gray-600"
                   onClick={handleDeleteCompleted}
                 >
-                  Clear completed
+                  Clear done
                 </button>
               </div>
             </div>
