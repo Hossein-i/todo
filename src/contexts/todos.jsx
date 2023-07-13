@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useLocalStorage from "../../hooks/localStorage";
+import useLocalStorage from "../hooks/localStorage";
 
 const TodosContext = React.createContext({
   todos: [{ id: "", title: "", done: false }],

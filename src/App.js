@@ -16,7 +16,8 @@ function App() {
           <a
             className="text-blue-600"
             href="https://hossein-i.ir"
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             Hossein-i
           </a>
